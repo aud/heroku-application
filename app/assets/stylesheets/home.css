@@ -71,6 +71,10 @@ section article.subsection {
 float: left;
 width: 25%;
 }
+section article.thirdsection {
+float: left;
+width: 33%;
+}
 article a {
 color: #C3CAD9 !important;
 font-weight: 700;
@@ -144,7 +148,30 @@ a#line-span {
   color: inherit;
   transition: background .15s cubic-bezier(.33,.66,.66,1);
   text-decoration: none;
+  border-bottom-style: none;
 }
 a:hover#line-span {
   background-color: #b4e7f8;
+}
+
+footer {
+  padding: 1% 5%;
+  text-align: center;
+  background-color: #373B44;
+  color: white;
+}
+footer a {
+  color: #7AB55C;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+#recently-done a, #recently-done ul { 
+  color: black !important;
+  text-decoration: none;
+  list-style: disc;
+}
+
+article li {
+  padding: 3px;
 }

@@ -1,2 +1,217 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<nav id="cd-vertical-nav">
+  <ul>
+    <li>
+    	<%= link_to '#section1', data: { number: 1 } do %>
+        <span class="cd-dot"></span>
+        <span class="cd-label">About</span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to '#section2', data: { number: 2 } do %>
+        <span class="cd-dot"></span>
+        <span class="cd-label">Recently</span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to '#section3', data: { number: 3 } do %>
+        <span class="cd-dot"></span>
+        <span class="cd-label">Technologies</span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to '#section4', data: { number: 4 } do %>
+        <span class="cd-dot"></span>
+        <span class="cd-label">Contact</span>
+      <% end %>
+    </li>
+  </ul>
+ </nav>
+
+<section id="section1" class="cd-section">
+  <div class="wide-slide">
+    <%= javascript_tag do %>
+      $(function(){
+        $("#typed").typed({
+          strings: ["Hey,", "My name is Elliot"],
+          typeSpeed: 150,
+          backSpeed: 60,
+          backDelay: 700
+        });
+      });
+    <% end %>
+
+    <h1><i class="twa twa-2x twa-wave"></i>&nbsp;<span id="typed"></span></h1>
+    <p>
+      Hey, my name is Elliot Dohm! This is my application for the <b>Support Operations Developer</b> role.
+    </p>
+    <p>
+      This is a scrappy web app built on Ruby on Rails. Showcasing an example of interacting with the Zendesk API Client, running a clearDB instance with MySQL as a backend data store. And a little bit about me! This is hosted on Heroku, <%= link_to 'version controlled with Git', 'https://github.com/aud/heroku-application', target: '_blank', id: 'line-span' %>, built with <i class="twa twa-heart"></i>
+    </p>
+  </div>
+</section>
+
+<section id="section2" class="cd-section">
+  <div class="wide-slide">
+    <i class="twa twa-3x twa-desktop-computer"></i>
+    <i class="twa twa-3x twa-open-book"></i>
+    <h1>
+      Things I've done recently
+    </h1>
+    <p style="color: #30373B;">
+    	While in the Tier 3 role, I've made 100+ contributions (PR's) to Shopify core.
+      This section highlights various things I've done recently. Books I've read. Code I've shipped. And things I've learned.
+    </p>
+    <article class="thirdsection" id="recently-done">
+      <h2>Books read</h2>
+      <ul>
+        <li>
+       		<%= link_to 'Practical Object-Oriented Design in Ruby', 'http://www.poodr.com/', target: '_blank' %>
+        </li>
+        <li>
+        	<%= link_to 'Agile Web Development with Rails 5', 'https://pragprog.com/book/rails5/agile-web-development-with-rails-5', target: '_blank' %>
+        </li>
+        <li>
+       		<%= link_to 'Google - Site Reliability Engineering', 'https://landing.google.com/sre/book.html', target: '_blank' %>
+        </li>
+      </ul>
+    </article>
+
+    <article class="thirdsection" id="recently-done">
+      <h2>Code shipped</h2>
+      <ul>
+        <li>
+       		<%= link_to 'Shopify/shopify#86734', 'https://github.com/Shopify/shopify/pull/86734', target: '_blank' %>
+        </li>
+        <li>
+        	<%= link_to 'Shopify/shopify#83756', 'https://github.com/Shopify/shopify/pull/83756', target: '_blank' %>
+        </li>
+        <li>
+       		<%= link_to 'Shopify/shopify#84635', 'https://github.com/Shopify/shopify/pull/84635', target: '_blank' %>
+        </li>
+        <li>
+       		<%= link_to 'Shopify/shopify#85766', 'https://github.com/Shopify/shopify/pull/85766', target: '_blank' %>
+        </li>
+        <li>
+       		<%= link_to 'Shopify/shopify#84488', 'https://github.com/Shopify/shopify/pull/84488', target: '_blank' %>
+        </li>
+      </ul>
+    </article>
+
+    <article class="thirdsection" id="recently-done">
+      <h2>Things learned</h2>
+      <ul>
+        <li>
+       		<%= link_to 'Go', 'https://golang.org/', target: '_blank' %>
+        </li>
+        <li>
+        	<%= link_to 'HTML', 'http://rubyonrails.org/', target: '_blank' %>
+        </li>
+        <li>
+       		<%= link_to 'CSS', 'http://backbonejs.org/', target: '_blank' %>
+        </li>
+        <li>
+       		<%= link_to 'Javascript', 'http://getbootstrap.com/', target: '_blank' %>
+        </li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section id="section3" class="cd-section">
+  <div class="wide-slide">
+  <i class="twa twa-3x twa-bulb"></i>
+  <i class="twa twa-3x twa-memo"></i>
+  <i class="twa twa-3x twa-ship"></i>
+    <h1>Have experience building </h1>
+    <p>
+      This highlights some different technologies I have some experience building with.
+    </p>
+    <article class="subsection">
+      <h2>Languages</h2>
+      <ul>
+        <li>
+       		<%= link_to 'Go', 'https://golang.org/', target: '_blank', id: 'line-span' %>
+        </li>
+        <li>
+        	<%= link_to 'HTML', 'http://rubyonrails.org/', target: '_blank', id: 'line-span' %>
+        </li>
+        <li>
+       		<%= link_to 'CSS', 'http://backbonejs.org/', target: '_blank', id: 'line-span' %>
+        </li>
+        <li>
+       		<%= link_to 'Javascript', 'http://getbootstrap.com/', target: '_blank', id: 'line-span' %>
+        </li>
+      </ul>
+    </article>
+
+    <article class="subsection">
+      <h2>Frameworks</h2>
+      <ul>
+        <li>
+        	<%= link_to 'Ruby on Rails', 'http://rubyonrails.org/', target: '_blank', id: 'line-span' %>
+        </li>
+        <li>
+       		<%= link_to 'Backbone JS', 'http://backbonejs.org/', target: '_blank', id: 'line-span' %>
+        </li>
+        <li>
+       		<%= link_to 'Bootstrap', 'http://getbootstrap.com/', target: '_blank', id: 'line-span' %>
+        </li>
+      </ul>
+    </article>
+
+    <article class="subsection">
+      <h2>Databases</h2>
+      <ul>
+        <li>
+       		<%= link_to 'MySql', 'http://www.mysql.com/', target: '_blank', id: 'line-span' %>
+        </li>
+        <li>
+        	<%= link_to 'ClearDB', 'http://w2.cleardb.net/', target: '_blank', id: 'line-span' %>
+        </li>
+        <li>
+        	<%= link_to 'PostgreSQL', 'https://www.postgresql.org/', target: '_blank', id: 'line-span' %>
+        </li>
+      </ul>
+    </article>
+
+    <article class="subsection">
+      <h2>Libraries</h2>
+      <ul>
+        <li>
+       		<%= link_to 'jQuery', 'https://jquery.com/', target: '_blank', id: 'line-span' %>
+        </li>
+        <li>
+        	<%= link_to 'Lua Fun', 'https://github.com/rtsisyk/luafun', target: '_blank', id: 'line-span' %>
+        </li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section id="section4" class="cd-section">
+  <div class="wide-slide">
+    <i class="twa twa-3x twa-speech-balloon"></i>
+    <h1>Contact</h1>
+    <%= mail_to 'elliot.dohm@shopify.com', class: 'button inverted arrow-animation arrow-right' do %>
+      <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+    <% end %>
+
+    <%= link_to 'https://shopify.slack.com/team/elliot', class: 'button inverted arrow-animation arrow-right', target: '_blank' do %>
+      <span><i class="fa fa-lg fa-slack" aria-hidden="true"></i></span>
+    <% end %>
+
+    <%= link_to 'https://github.com/aud', class: 'button inverted arrow-animation arrow-right', target: '_blank' do %>
+      <span><i class="fa fa-lg fa-github" aria-hidden="true"></i></span>
+    <% end %>
+  </div>
+</section>
+
+<%= render 'footer' %>
+
+<%= javascript_include_tag(
+  'https://use.typekit.net/uod2sct.js',
+  'https://use.fontawesome.com/bde7c9f856.js'
+) %>
+<%= javascript_tag('https://use.typekit.net/uod2sct.js') do %>
+  try{Typekit.load({ async: false });}catch(e){}
+<% end %>
