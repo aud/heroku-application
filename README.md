@@ -1,3 +1,3 @@
 # README
 
-Application
+Heroku Application

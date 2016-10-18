@@ -1,9 +1,21 @@
-require_relative 'boot'
+require File.expand_path('../boot', __FILE__)
+
 require 'rails/all'
 
-Bundler.require(*Rails.groups)
+if defined?(Bundler)
+  Bundler.require(*Rails.groups(:assets => %w(development test)))
+end
 
-module HerokuApplication
+module ZD_Application
   class Application < Rails::Application
+    config.encoding = "utf-8"
+
+    config.filter_parameters += [:password]
+    config.active_support.escape_html_entities_in_json = true
+
+    config.assets.enabled = true
+    config.assets.version = '1.0'
+
+    config.assets.initialize_on_precompile=false
   end
 end

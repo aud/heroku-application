@@ -1,0 +1,15 @@
+<%= form_tag(tickets_path) do %>
+	<%= label_tag :requester_name, 'Full Name' %>
+	<%= text_field_tag :requester_name, nil %>
+
+	<%= label_tag :email %>
+	<%= email_field_tag :email, nil %>
+
+	<%= label_tag :subject %>
+	<%= text_field_tag :subject, nil %>
+
+	<%= label_tag :body, 'What the problem is' %>
+	<%= text_area_tag :body, nil %>
+
+	<%= submit_tag 'Your question' %>
+<% end %>

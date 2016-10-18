@@ -1,0 +1,4 @@
+<%= form_tag({ controller: 'tickets', action: 'index_and_search' }, method: 'get') do %>
+  <%= text_field_tag :id, params[:id], placeholder: 'Search Ticket ID' %>
+  <%= submit_tag 'Search' %>
+<% end %>
