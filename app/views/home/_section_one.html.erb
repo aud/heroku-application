@@ -1,0 +1,22 @@
+<section id="section1" class="cd-section">
+  <div class="wide-slide">
+    <%= javascript_tag do %>
+      $(function(){
+        $("#typed").typed({
+          strings: ["Hey,", "My name is Elliot"],
+          typeSpeed: 150,
+          backSpeed: 60,
+          backDelay: 700
+        });
+      });
+    <% end %>
+
+    <h1><i class="twa twa-2x twa-wave"></i>&nbsp;<span id="typed"></span></h1>
+    <p>
+      Hey, my name is Elliot Dohm! This is my application for the <b>Support Operations Developer</b> role.
+    </p>
+    <p>
+      This is a scrappy web app built on Ruby on Rails. Showcasing an example of interacting with the Zendesk API Client, running a clearDB instance with MySQL as a backend data store. And a little bit about me! This is hosted on Heroku, <%= link_to 'version controlled with Git', 'https://github.com/aud/heroku-application', target: '_blank', id: 'line-span' %>, built with <i class="twa twa-heart"></i>
+    </p>
+  </div>
+</section>
