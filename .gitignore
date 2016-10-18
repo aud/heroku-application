@@ -23,3 +23,5 @@
 /config/secrets.yml
 
 **/.DS_Store
+**/.keep
+tmp
