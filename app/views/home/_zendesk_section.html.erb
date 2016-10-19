@@ -1,10 +1,33 @@
 <section id="zendesk_section" class="cd-section">
   <div class="wide-slide">
-    <%= render 'tickets/new' %>
-		<div class="pc-tab">
+	  <div class="pc-tab">
+			<input checked="checked" id="tab3" type="radio" name="pct-2" />
+			<input id="tab4" type="radio" name="pct-2" />
+		  <nav>
+		    <ul>
+		      <li class="tab3">
+		        <label for="tab3">Create ticket</label>
+		      </li>
+		      <li class="tab4">
+		        <label for="tab4">Other thing</label>
+		      </li>
+		    </ul>
+		  </nav>
+		  <section id="clear-both">
+		    <div class="tab3">
+		      <h2>Create ticket</h2><br>
+					<%= render 'tickets/new' %>
+		    </div>
+		    <div class="tab4">
+		      <h2>Result</h2>
+		      <p>test</p>
+		    </div>
+		  </section>
+	  </div>
+
+	  <div class="pc-tab">
 			<input checked="checked" id="tab1" type="radio" name="pct" />
 			<input id="tab2" type="radio" name="pct" />
-			<input id="tab3" type="radio" name="pct" />
 		  <nav>
 		    <ul>
 		      <li class="tab1">
@@ -17,7 +40,7 @@
 		  </nav>
 		  <section id="clear-both">
 		    <div class="tab1">
-		      <h2>development.log</h2>
+		      <h2>development.log</h2><br>
 					<pre><code><%= logging %></code></pre>
 		    </div>
 		    <div class="tab2">
