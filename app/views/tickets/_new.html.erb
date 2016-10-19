@@ -1,15 +1,15 @@
 <%= form_tag(tickets_path) do %>
 	<%= label_tag :requester_name, 'Full Name' %>
-	<%= text_field_tag :requester_name, nil, class: 'feedback-input' %>
+	<%= text_field_tag :requester_name, nil, class: 'feedback-input', required: true %>
 
 	<%= label_tag :email %>
-	<%= email_field_tag :email, nil, class: 'feedback-input' %>
+	<%= email_field_tag :email, nil, class: 'feedback-input', required: true %>
 
 	<%= label_tag :subject %>
-	<%= text_field_tag :subject, nil, class: 'feedback-input' %>
+	<%= text_field_tag :subject, nil, class: 'feedback-input', required: true %>
 
 	<%= label_tag :body, 'What the problem is' %>
-	<%= text_area_tag :body, nil, class: 'feedback-input' %>
+	<%= text_area_tag :body, nil, class: 'feedback-input', required: true %>
 
-	<%= submit_tag 'Your question', id: 'submit-button' %>
+	<%= submit_tag 'Your question', id: 'submit-button', required: true %>
 <% end %>
