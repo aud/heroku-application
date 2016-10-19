@@ -3,11 +3,11 @@ class TicketsController < ApplicationController
   end
 
   def create
-    @requester_name = params[:requester_name]
-    @email = params[:email]
     @ticket = ticket_params
-
-    render 'create', layout: false
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def index_and_search

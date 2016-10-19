@@ -1,4 +1,4 @@
-<%= form_tag(tickets_path) do %>
+<%= form_tag(tickets_path, remote: true) do %>
 	<%= label_tag :requester_name, 'Full Name' %>
 	<%= text_field_tag :requester_name, nil, class: 'feedback-input', required: true %>
 
@@ -12,4 +12,5 @@
 	<%= text_area_tag :body, nil, class: 'feedback-input', required: true %>
 
 	<%= submit_tag 'Your question', id: 'submit-button', required: true %>
+	<span id="ticket-submit"></span>
 <% end %>
