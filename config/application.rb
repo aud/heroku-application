@@ -1,6 +1,16 @@
 require File.expand_path('../boot', __FILE__)
 
-require 'rails/all'
+[
+  'action_controller/railtie',
+  'action_view/railtie',
+  'action_mailer/railtie',
+  'active_job/railtie',
+  'action_cable/engine',
+  'rails/test_unit/railtie',
+  'sprockets/railtie'
+].each(&method(:require))
+
+
 
 if defined?(Bundler)
   Bundler.require(*Rails.groups(:assets => %w(development test)))
