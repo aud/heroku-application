@@ -3,7 +3,7 @@
 <p style="color: black;">If you would like to add a comment, you can do so here:</p>
 
 <%= form_tag(ticket_path(@ticket.id), method: :put, remote: true) do %>
-	<%= label_tag :comment, 'Add comment' %>
-	<%= text_area_tag :comment, nil, class: 'feedback-input' %>
-	<%= submit_tag 'Add comment', id: 'submit-button', data: { disable_with: "Please wait..." } %>
+  <%= label_tag :comment, 'Add comment' %>
+  <%= text_area_tag :comment, nil, class: 'feedback-input' %>
+  <%= submit_tag 'Add comment', id: 'submit-button', data: { disable_with: "Please wait..." } %>
 <% end %>

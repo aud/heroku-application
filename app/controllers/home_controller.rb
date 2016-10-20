@@ -1,7 +1,7 @@
 require 'reloader/sse'
 
 class HomeController < ApplicationController
-	include ActionController::Live
+  include ActionController::Live
   def index
   end
 

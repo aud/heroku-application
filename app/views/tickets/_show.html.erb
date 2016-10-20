@@ -1,15 +1,15 @@
 <%= form_tag(ticket_path(@id), method: :put, remote: true) do %>
-	<%= label_tag :comment, "Add comment for ticket ##{@id}:" %>
-	<%= text_area_tag :comment, nil %>
-	<%= submit_tag 'Add comment', id: 'submit-button', data: { disable_with: "Please wait..." } %>
+  <%= label_tag :comment, "Add comment for ticket ##{@id}:" %>
+  <%= text_area_tag :comment, nil %>
+  <%= submit_tag 'Add comment', id: 'submit-button', data: { disable_with: "Please wait..." } %>
 <% end %>
 
 <% if @comments.present? %>
 <br><hr /><br>
-	<h2>Previous comments</h2><br>
-	<ul>
-		<% @comments.each do |comment| %>
-			<li id="new_l"><%= comment.body %></li>
-		<% end %>
-	</ul>
+  <h2>Previous comments</h2><br>
+  <ul>
+    <% @comments.each do |comment| %>
+      <li id="new_l"><%= comment.body %></li>
+    <% end %>
+  </ul>
 <% end %>
