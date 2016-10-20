@@ -1,4 +1,13 @@
 <div id="clear">
 	<h1>Thanks for submitting a ticket <%= @requester_name %></h1>
 	<h2>Your ticket ID is <%= @ticket.id %></h2>
+
+
+	If you would like to add a comment, you can do so here:
+
+	<%= form_tag(ticket_path(@ticket.id), method: :put, remote: true) do %>
+	<%= label_tag :comment, 'Add comment' %>
+	<%= text_area_tag :comment, nil %>
+	<%= submit_tag 'Add comment' %>
+<% end %>
 </div>

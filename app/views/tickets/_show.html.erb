@@ -1,6 +1,6 @@
 <h1>Details for Ticket #<%= @id %></h1>
 
-<%= form_tag(ticket_path(params[:id]), method: :put) do %>
+<%= form_tag(ticket_path(@id), method: :put, remote: true) do %>
 	<%= label_tag :comment, 'Add comment' %>
 	<%= text_area_tag :comment, nil %>
 	<%= submit_tag 'Add comment' %>

@@ -11,7 +11,7 @@
 		        <label for="tab3">Create ticket</label>
 		      </li>
 		      <li class="tab4">
-		        <label for="tab4">Other thing</label>
+		        <label for="tab4">Search ticket id</label>
 		      </li>
 		    </ul>
 		  </nav>
@@ -22,8 +22,9 @@
 					<%= render 'tickets/new' %>
 		    </div>
 		    <div class="tab4">
-		      <h2>Result</h2>
-		      <p>test</p>
+		      <h2>Search ticket id</h2>
+		      <p id="zendesk_p">Search ticket id</p>
+		      <%= render 'tickets/index_and_search' %>
 		    </div>
 		  </section>
 	  </div>

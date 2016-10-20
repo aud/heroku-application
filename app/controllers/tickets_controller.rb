@@ -2,8 +2,13 @@ class TicketsController < ApplicationController
   def new
   end
 
+  def show
+  end
+
   def create
     @ticket = ticket_params
+    @requester_name = params[:requester_name]
+    @comment = client.requests.find(id: @ticket.id).comments
     respond_to do |format|
       format.html
       format.js
@@ -12,27 +17,28 @@ class TicketsController < ApplicationController
 
   def index_and_search
     @id = params[:id]
+    @comments = client.requests.find(id: @id).comments
     if @id
       @hello = client.requests.find(id: @id)
+      respond_to do |format|
+        format.html
+        format.js
+      end
     end
-
-    render 'index_and_search', layout: false
-  end
-
-  def show
-    @comments = client.requests.find(id: params[:id]).comments
-    render 'show', layout: false
   end
 
   def update
     @id = params[:id]
+    @comments = client.requests.find(id: @id).comments
     @comment = params[:comment]
 
     @update = client.requests.find(id: @id)
     @update.comment = { body: @comment}
-    @update.save
-
-    redirect_to ticket_path(@id)
+    if @update.save
+      respond_to do |format|
+        format.js
+      end
+    end
   end
 
   private
