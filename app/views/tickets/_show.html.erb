@@ -1,7 +1,7 @@
 <%= form_tag(ticket_path(@id), method: :put, remote: true) do %>
 	<%= label_tag :comment, "Add comment for ticket ##{@id}:" %>
 	<%= text_area_tag :comment, nil %>
-	<%= submit_tag 'Add comment', id: 'submit-button' %>
+	<%= submit_tag 'Add comment', id: 'submit-button', data: { disable_with: "Please wait..." } %>
 <% end %>
 
 <% if @comments.present? %>

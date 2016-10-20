@@ -45,7 +45,7 @@
 						data: { confirm: 'Are you sure you want to delete the ticket from Zendesk? This is an irreversible action' }
 					) do %>
 			    	<%= text_area_tag :id, params[:id], placeholder: '1234', class: 'feedback-input' %>
-			    	<%= submit_tag 'Delete ticket', id: 'submit-button' %>
+			    	<%= submit_tag 'Delete ticket', id: 'submit-button', data: { disable_with: "Please wait..." } %>
 					<% end %>
 		    </div>
 		  </section>
