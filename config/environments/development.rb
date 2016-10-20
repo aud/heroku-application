@@ -11,6 +11,8 @@ Rails.application.configure do
   config.action_dispatch.best_standards_support = :builtin
   config.assets.compress = false
 
+  config.allow_concurrency = true
+
   config.assets.debug = true
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end

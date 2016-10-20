@@ -45,9 +45,16 @@
 		    </div>
 		    <div class="tab2">
 		      <h2>development.log</h2><br>
-					<pre><code><%= logging %></code></pre>
+					<pre><code id="logging"><%= logging %></code></pre>
 		    </div>
 		  </section>
 	  </div>
 	</div>
 </section>
+
+<%= javascript_tag do %>
+  var event_source = new EventSource('/log_feed');
+  event_source.addEventListener('message', function (event) {
+    $("#logging").prepend(event.data + '\n');
+  }, false);
+<% end %>

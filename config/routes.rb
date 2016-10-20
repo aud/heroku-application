@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'home/index'
   get 'humans', to: 'home#humans'
 
+  get 'log_feed', to: 'home#log_feed'
+
   get 'tickets', to: 'tickets#index_and_search'
 
   resources :tickets
