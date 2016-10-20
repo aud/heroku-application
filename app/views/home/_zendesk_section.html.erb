@@ -21,7 +21,7 @@
 		  </nav>
 		  <section id="clear-both">
 		    <div class="tab3">
-		      <h2>Create ticket</h2><br>
+		      <h2>Create ticket</h2>
 		      <p id="zendesk_p">Submitting your details in this form creates Zendesk ticket using the [Zendesk Ruby API] to. On the right, your ticket live updates on the page with an ajax request.</p>
 					<%= render 'tickets/new' %>
 		    </div>
@@ -39,8 +39,8 @@
 						remote: true,
 						data: { confirm: 'Are you sure you want to delete the ticket from Zendesk? This is an irreversible action' }
 					) do %>
-			    	<%= text_field_tag :id, params[:id], placeholder: 'Delete Ticket ID' %>
-			    	<%= submit_tag 'Delete' %>
+			    	<%= text_area_tag :id, params[:id], placeholder: 'Delete Ticket ID', class: 'feedback-input' %>
+			    	<%= submit_tag 'Delete', id: 'submit-button' %>
 					<% end %>
 		    </div>
 		  </section>
@@ -61,7 +61,7 @@
 		  </nav>
 		  <section id="clear-both">
 		    <div class="tab1">
-		      <h2>Result</h2>
+		      <h2>Result</h2><br>
 		      <span id="ticket-create"></span>
 		    </div>
 		    <div class="tab2">
