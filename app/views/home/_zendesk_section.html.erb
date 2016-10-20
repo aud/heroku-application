@@ -1,5 +1,7 @@
 <section id="zendesk_section" class="cd-section">
   <div class="wide-slide">
+  <h1>Zendesk API Example</h1>
+  <p>yadayada</p>
 	  <div class="pc-tab">
 			<input checked="checked" id="tab3" type="radio" name="pct-2" />
 			<input id="tab4" type="radio" name="pct-2" />
@@ -16,6 +18,7 @@
 		  <section id="clear-both">
 		    <div class="tab3">
 		      <h2>Create ticket</h2><br>
+		      <p id="zendesk_p">Submitting your details in this form creates Zendesk ticket using the [Zendesk Ruby API] to. On the right, your ticket live updates on the page with an ajax request.</p>
 					<%= render 'tickets/new' %>
 		    </div>
 		    <div class="tab4">
@@ -45,6 +48,7 @@
 		    </div>
 		    <div class="tab2">
 		      <h2>development.log</h2><br>
+		      <p id="zendesk_p">The logs on this side poll updates live using ActionController::Live, etc</p>
 					<pre><code id="logging"><%= logging %></code></pre>
 		    </div>
 		  </section>
