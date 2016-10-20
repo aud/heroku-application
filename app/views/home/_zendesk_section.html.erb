@@ -1,4 +1,4 @@
-<section id="zendesk_section" class="cd-section">
+<section id="section5" class="cd-section">
   <div class="wide-slide">
   <h1>Zendesk API Example</h1>
   <p>
@@ -32,20 +32,20 @@
 		    </div>
 		    <div class="tab4">
 		      <h2>Search ticket</h2>
-		      <p id="zendesk_p">Search ticket id</p>
+		      <p id="zendesk_p">To search, enter your ticket id below to see updates.</p>
 		      <%= render 'tickets/index_and_search' %>
 		    </div>
 		    <div class="tab5">
 		      <h2>Delete ticket</h2>
-		      <p id="zendesk_p">Delete ticket id</p>
+		      <p id="zendesk_p">To delete your ticket forever, enter your ticket id below. <i class='twa twa-bomb'></i></p>
 					<%= form_tag(
 						{ controller: 'tickets', action: 'destroy' },
 						method: 'post',
 						remote: true,
 						data: { confirm: 'Are you sure you want to delete the ticket from Zendesk? This is an irreversible action' }
 					) do %>
-			    	<%= text_area_tag :id, params[:id], placeholder: 'Delete Ticket ID', class: 'feedback-input' %>
-			    	<%= submit_tag 'Delete', id: 'submit-button' %>
+			    	<%= text_area_tag :id, params[:id], placeholder: '1234', class: 'feedback-input' %>
+			    	<%= submit_tag 'Delete ticket', id: 'submit-button' %>
 					<% end %>
 		    </div>
 		  </section>

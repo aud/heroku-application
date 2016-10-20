@@ -1,15 +1,15 @@
 <%= form_tag(tickets_path, remote: true) do %>
 	<%= label_tag :requester_name, 'Full Name' %>
-	<%= text_field_tag :requester_name, nil, class: 'feedback-input', required: true %>
+	<%= text_field_tag :requester_name, nil, placeholder: 'Your name', class: 'feedback-input', required: true %>
 
 	<%= label_tag :email %>
-	<%= email_field_tag :email, nil, class: 'feedback-input', required: true %>
+	<%= email_field_tag :email, nil, placeholder: 'Email@shopify.com', class: 'feedback-input', required: true %>
 
 	<%= label_tag :subject %>
-	<%= text_field_tag :subject, nil, class: 'feedback-input', required: true %>
+	<%= text_field_tag :subject, nil, placeholder: 'The subject', class: 'feedback-input', required: true %>
 
 	<%= label_tag :body, 'What the problem is' %>
-	<%= text_area_tag :body, nil, class: 'feedback-input', required: true %>
+	<%= text_area_tag :body, nil, placeholder: 'The problem', class: 'feedback-input', required: true %>
 
 	<%= submit_tag 'Submit ticket', id: 'submit-button', required: true %>
 	<span id="ticket-submit"></span>
