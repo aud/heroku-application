@@ -14,7 +14,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'zendesk_api'
 gem 'json'
 gem 'sprockets-rails', require: 'sprockets/railtie'
-gem 'protected_attributes_continued'
 
 
 group :development do
