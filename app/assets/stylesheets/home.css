@@ -217,7 +217,8 @@ section #clear-both {
 #tab1:checked ~ section .tab1,
 #tab2:checked ~ section .tab2,
 #tab3:checked ~ section .tab3,
-#tab4:checked ~ section .tab4
+#tab4:checked ~ section .tab4,
+#tab5:checked ~ section .tab5
  {
   display: block;
 }
@@ -274,7 +275,8 @@ section #clear-both {
 #tab1:checked ~ nav .tab1 label,
 #tab2:checked ~ nav .tab2 label,
 #tab3:checked ~ nav .tab3 label,
-#tab4:checked ~ nav .tab4 label
+#tab4:checked ~ nav .tab4 label,
+#tab5:checked ~ nav .tab5 label
 {
   background: white;
   color: #111;

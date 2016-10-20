@@ -5,6 +5,13 @@ class TicketsController < ApplicationController
   def show
   end
 
+  def destroy
+    client.ticket.destroy!(id: params[:id])
+    respond_to do |format|
+      format.json { head :no_content }
+    end
+  end
+
   def create
     @ticket = ticket_params
     @requester_name = params[:requester_name]
@@ -18,8 +25,7 @@ class TicketsController < ApplicationController
   def index_and_search
     @id = params[:id]
     @comments = client.requests.find(id: @id).comments
-    if @id
-      @hello = client.requests.find(id: @id)
+    if client.requests.find(id: @id)
       respond_to do |format|
         format.html
         format.js
@@ -32,7 +38,7 @@ class TicketsController < ApplicationController
     @comments = client.requests.find(id: @id).comments
     @comment = params[:comment]
 
-    @update = client.requests.find(id: @id)
+    @update = client.requests.find(id: @id) if @id
     @update.comment = { body: @comment}
     if @update.save
       respond_to do |format|

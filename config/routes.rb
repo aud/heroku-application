@@ -8,5 +8,7 @@ Rails.application.routes.draw do
 
   get 'tickets', to: 'tickets#index_and_search'
 
+  post 'destroy', to: 'tickets#destroy'
+
   resources :tickets
 end
