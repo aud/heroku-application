@@ -15,7 +15,6 @@ gem 'zendesk_api'
 gem 'json'
 gem 'sprockets-rails', require: 'sprockets/railtie'
 
-
 group :development do
   gem 'web-console'
   gem 'listen', '~> 3.0.5'

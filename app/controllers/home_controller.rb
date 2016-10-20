@@ -10,9 +10,10 @@ class HomeController < ApplicationController
   end
 
   def log_feed
+    logs = `tail -n 25 log/#{Rails.env}.log`.split(/\n/)
     response.headers['Content-Type'] = 'text/event-stream'
     sse = SSE.new(response.stream)
-    sse.write('test')
+    sse.write(logs)
   ensure
     sse.close
   end
