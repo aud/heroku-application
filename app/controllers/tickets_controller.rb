@@ -38,9 +38,9 @@ class TicketsController < ApplicationController
     @comments = client.requests.find(id: @id).comments
     @comment = params[:comment]
 
-    @update = client.requests.find(id: @id) if @id
-    @update.comment = { body: @comment}
-    if @update.save
+    update = client.requests.find(id: @id) if @id
+    update.comment = { body: @comment }
+    if update.save
       respond_to do |format|
         format.js
       end

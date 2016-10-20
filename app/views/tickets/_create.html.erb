@@ -6,8 +6,8 @@
 	If you would like to add a comment, you can do so here:
 
 	<%= form_tag(ticket_path(@ticket.id), method: :put, remote: true) do %>
-	<%= label_tag :comment, 'Add comment' %>
-	<%= text_area_tag :comment, nil %>
-	<%= submit_tag 'Add comment' %>
-<% end %>
+		<%= label_tag :comment, 'Add comment' %>
+		<%= text_area_tag :comment, nil %>
+		<%= submit_tag 'Add comment' %>
+	<% end %>
 </div>
