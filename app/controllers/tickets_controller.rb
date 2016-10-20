@@ -8,7 +8,7 @@ class TicketsController < ApplicationController
   def destroy
     client.ticket.destroy!(id: params[:id])
     respond_to do |format|
-      format.json { head :no_content }
+      format.js
     end
   end
 

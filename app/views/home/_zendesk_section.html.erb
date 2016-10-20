@@ -1,7 +1,12 @@
 <section id="zendesk_section" class="cd-section">
   <div class="wide-slide">
   <h1>Zendesk API Example</h1>
-  <p>yadayada</p>
+  <p>
+    The following is an example of the <%= link_to 'Zendesk Ruby API Client', 'https://github.com/zendesk/zendesk_api_client_rb', id: 'line-span', target: '_blank' %> I created. It allows the user to query, update, create, and delete tickets using the Zendesk API. It uses inline Ajax requests that update the rendered result forms in real time. 
+  </p>
+  <p>
+    This example uses Rails <%= link_to 'ActionController::Live', 'http://api.rubyonrails.org/classes/ActionController/Live.html', id: 'line-span', target: '_blank' %> and EventSource to  poll a stream of the development/production.log files every 3 seconds to the browser as they are written. This process allows the user to view server side logs live, through the browser as new logs are created.
+	</p>
 	  <div class="pc-tab">
 			<input checked="checked" id="tab3" type="radio" name="pct-2" />
 			<input id="tab4" type="radio" name="pct-2" />
@@ -22,7 +27,7 @@
 		  <section id="clear-both">
 		    <div class="tab3">
 		      <h2>Create ticket</h2>
-		      <p id="zendesk_p">Submitting your details in this form creates Zendesk ticket using the [Zendesk Ruby API] to. On the right, your ticket live updates on the page with an ajax request.</p>
+		      <p id="zendesk_p">Submit your details below to create a Zendesk ticket. Under the Result tab, the ticket output will be rendered through an Ajax request.</p>
 					<%= render 'tickets/new' %>
 		    </div>
 		    <div class="tab4">
@@ -66,7 +71,7 @@
 		    </div>
 		    <div class="tab2">
 		      <h2>development.log</h2><br>
-		      <p id="zendesk_p">The logs on this side poll updates live using ActionController::Live, etc</p>
+		      <p id="zendesk_p">The following is a view of server side logs, polled live every 3 seconds.</p>
 					<pre><code id="logging"><%= logging %></code></pre>
 		    </div>
 		  </section>
