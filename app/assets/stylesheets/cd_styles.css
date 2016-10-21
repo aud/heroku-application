@@ -1,8 +1,6 @@
-/* No Touch devices */
 .cd-nav-trigger {
   display: none;
 }
-
 .no-touch #cd-vertical-nav {
   position: fixed;
   right: 40px;
@@ -20,7 +18,6 @@
 }
 .no-touch #cd-vertical-nav a {
   display: inline-block;
-  /* prevent weird movements on hover when you use a CSS3 transformation - webkit browsers */
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -53,7 +50,6 @@
 }
 .no-touch #cd-vertical-nav .cd-dot {
   position: relative;
-  /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
   top: 8px;
   height: 12px;
   width: 12px;
@@ -85,8 +81,6 @@
   -o-transform-origin: 100% 50%;
   transform-origin: 100% 50%;
 }
-
-/* Touch devices */
 .touch .cd-nav-trigger {
   display: block;
   z-index: 2;
@@ -129,7 +123,6 @@
 .touch .cd-nav-trigger span::after {
   bottom: -9px;
 }
-
 .touch #cd-vertical-nav {
   position: fixed;
   z-index: 1;
@@ -209,7 +202,6 @@
 .touch #cd-vertical-nav li:last-child a {
   border-bottom: none;
 }
-
 @media only screen and (min-width: 768px) {
   .touch .cd-nav-trigger, .touch #cd-vertical-nav {
     bottom: 40px;

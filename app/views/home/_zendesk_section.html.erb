@@ -70,7 +70,11 @@
           <span id="ticket-create"></span>
         </div>
         <div class="tab2">
-          <h2>development.log</h2><br>
+          <% if Rails.env == 'production' %>
+            <h2>production.log</h2>
+          <% else %>
+            <h2>development.log</h2>
+          <% end %>
           <p id="zendesk_p">The following is a view of server side logs, polled live every 3 seconds.</p>
           <pre style="overflow-y: scroll; height:531px;"><code id="logging"></code></pre>
         </div>
