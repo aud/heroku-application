@@ -348,3 +348,14 @@ hr {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+#recently-done-text li:before, li {
+  content: '' !important;
+  padding: 0 !important;
+}
+
+#recently-done-text p, #recently-done-text p:before {
+  font-weight: 300px;
+  font-size: 20px;
+  content: '• ';
+}
